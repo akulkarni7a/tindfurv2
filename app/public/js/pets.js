@@ -45,7 +45,9 @@ var longitude1;
 
     // console.log(userData);
 
-    $.get("/search/pets",userData,function(data){
+    $.get("/search/pets/"+userData.animal,function(data){
+      console.log("User Data Animal");
+      console.log(userData.animal);
 
     });
 
@@ -65,7 +67,7 @@ var longitude1;
       photo: $("#photoUpload").val().trim()
     }
 
-    console.log(userData);
+  
 
     // console.log(userData);
 

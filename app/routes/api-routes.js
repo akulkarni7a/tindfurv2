@@ -13,10 +13,33 @@ var Pet = require("../models/petconnection.js");
 module.exports = function(app) {
 
   // Get all chirps
-  app.get("/search/pets", function(req, res) {
+  app.get("/search/pets/:animal_type?/:gender?/:age?", function(req, res) {
 
     // var dbQuery = "SELECT * FROM pets WHERE animal_type = ? AND gender = ? AND age = ?";
+   
+    if(req.params.animal_type){
+      Pet.findOne({
+        where: {
+          animal_type: req.params.animal_type,
+        }
+      }).then(function(result){
+        // return res.json(result);
+        console.log("XXXXXX");
+        console.log("animal_type: "+req.params.animal_type);
+        // console.log("gender: "+req.params.gender);
+        // console.log("age: "+req.params.age);
+        console.log(result.dataValues);
+        res.render('search',result.dataValues);
+      })
+    }
+    else{
+      Pet.findAll({})
+        .then(function(result){
+          return res.json(result);
 
+        });
+   
+    }
 
     // connection.query(dbQuery,[req.query.animal,req.query.gender,req.query.age], function(err, result) {
     //   if(err){
@@ -31,16 +54,13 @@ module.exports = function(app) {
     //   // $("#Flavor").html(newresult.)
     //   // console.log("newresult: "+newresult);
     //   // move to html routes
-    //   res.render('search',newresult);
+    //   
 
     // }
     // });
 
-    Pet.findAll({}).then(function(result){
-      res.json(result);
-    })
 
-  });
+    });
 
   app.get("/search", function(req, res) {
 

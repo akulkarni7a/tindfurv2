@@ -164,16 +164,18 @@
           </div>
           <div class="col-md-6" class="results">
 
-            <h3 id="result"> Meet {{pts.animal_name}} </h3>
-            <p id="resultsub"> Species: {{animal_type}} | Age: {{this.id}} </p> 
-
-            <p id="bio"> {{location}} </p>
+        
             
-       {{!--      <p>Flavor: </p>
-            <p>Price: ${{gender}}</p>
-            <p>Awesomeness: {{location}}</p>
-            <hr>
-       --}}
+            <h3 id="result"> Meet {{animal_name}} </h3>
+
+
+            <p id="resultsub"> Species: {{this.animal_type}} | Age: {{body}} </p> 
+
+            <p id="bio"> {{dataValues.bio}} </p>
+  
+        
+
+        
 
 
 
@@ -244,6 +246,7 @@ window.onload = function() {
 
 $("#search").click(function(){
   $(".results").show();
+
 });
 </script>
 
