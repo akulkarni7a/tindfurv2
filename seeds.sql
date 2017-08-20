@@ -1,0 +1,1 @@
+insert into pets (animal_name, animal_type, gender, age, location, bio, photo) values ("Ellie","Dog","Female","Young","Pawlies Farm Cavaliers","She cool","")

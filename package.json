@@ -1,0 +1,29 @@
+{
+  "name": "tindfur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.14.1",
+    "mysql2": "^1.4.1",
+    "sequelize": "^4.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lforrister/tindfur.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lforrister/tindfur/issues"
+  },
+  "homepage": "https://github.com/lforrister/tindfur#readme"
+}

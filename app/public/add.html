@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TindFur | Pet Finder</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!--jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+
+  </head>
+  
+
+  <body class="index" id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <a class="navbar-brand" href="#page-top">tindfur</a>
+    </nav>
+
+    <!-- Header -->
+  			<img class="mySlides" src="img/kitty.jpg">
+  			<img class="mySlides" src="img/collie.jpg">
+			<img class="mySlides" src="img/kitten.jpg">
+			<img class="mySlides" src="img/bunny.jpg">
+			
+			
+			<h1 id = "slideText"> a happy home awaits. </h1>
+
+
+
+
+
+
+<!-- ===================================== FILTER BOX ========================================================== -->
+
+      <header class="profile">
+      <div class="container">
+        <h5 id="petProf"> PET PROFILE </h5>
+
+        <hr>
+
+       <!--  ================ CHECKBOXES =============== -->
+
+       <!-- ================= HEADER ROW ============== -->
+
+        
+
+          <h6 id="tablehead"> My pet is: </h6>
+
+       <!--  ================ ROW 1 =============== -->
+		<div class="row">
+
+          <div class="col-md-3 boxes">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="animaltype_name" id="cats">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Cat</span> <br>
+            </label>
+          </div>
+          <div class="col-md-3 boxes">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="animaltype_name" id="dogs">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Dog</span> <br>
+            </label>           
+          </div>
+          <div class="col-md-3 boxes">
+          	<label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="animaltype_name" id="other">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Other</span> <br>
+            </label> 
+       	   </div>
+       	  <div class="col-md-3 boxes">
+       	  	<label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="age_name" id="baby">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Baby</span> <br>
+            </label> 
+       	   </div>
+
+
+
+       <!--  ================ ROW 2 =============== -->
+
+   
+
+          <div class="col-md-3 boxes">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="age_name" id="youngadult">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Young</span> <br>
+            </label>
+          </div>
+          <div class="col-md-3 boxes">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="age_name" id ="olderadult">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Older</span> <br>
+            </label>           
+          </div>
+          <div class="col-md-3 boxes">
+          	<label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="gender_name" id="male">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Male</span> <br>
+            </label> 
+       	   </div>
+       	  <div class="col-md-3 boxes">
+       	  	<label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="gender_name" id="female">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Female</span> <br>
+            </label> 
+       	   </div>
+
+       <!--  ================ ROW 3 =============== -->
+  
+        <div class="col-md-6 boxes">
+           Name:
+           <input type="petName" class="form-control" id="petName" aria-describedby="petName" placeholder="Pet Name">        
+          </div>
+        <div class="col-md-6 boxes ">
+        	Location: <br>
+      <select class="locationMenu" id="dropdownmenu">
+			  <option value="dallaspetsalive">Dallas Pets Alive</option>
+			  <option value="humanesocietyofdallas">Humane Society of Dallas</option>
+			  <option value="operationkindness"> Operation Kindness</option>
+			  <option value="pawliesfarmcavaliers">Pawlies Farm Cavaliers</option>
+			</select>
+		</div>
+
+        <!-- =============== ROW 4 ================== -->
+
+          <div class="col-md-6 boxes">
+           Bio:
+           <div class="form-group">
+    			<textarea class="form-control" id="bioBox" rows="3"></textarea>
+ 			 </div>          
+          </div>
+          <div class="col-md-6 boxes ">
+            <form>
+  				<div class="form-group">
+    				<label for="photoUpload">Photo:</label>
+    				<input type="photo" class="form-control" id="photoUpload" aria-describedby="photoUpload" placeholder="Photo URL Here">
+  				</div>
+  			</form>
+  			<button type = "button" class="btn-primary" id="submit"> SUBMIT </button> <br> <br>
+          </div>
+          <script type="text/javascript" src="js/pets.js"></script>
+          
+
+
+     
+
+
+
+
+</div>
+
+    </header>
+    <br> 
+
+
+
+  
+         
+
+
+
+
+   
+      </div>
+    </header>
+    </header>
+
+    <br> <br>
+
+
+
+
+
+
+
+
+
+    <!-- Portfolio Grid Section -->
+<!--     <section id="portfolio">
+    </section> -->
+
+
+
+    <!-- Contact Section -->
+<!--     <section id="contact">
+      
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="text-center">
+           <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; TindFur 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery/javaScript -->
+
+	<script type="text/javascript">
+    var slideIndex = 0;
+	carousel();
+
+	function carousel() {
+    	var i;
+    	var x = document.getElementsByClassName("mySlides");
+    	for (i = 0; i < x.length; i++) {
+      	x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    	if (slideIndex > x.length) {slideIndex = 1} 
+    	x[slideIndex-1].style.display = "block"; 
+    	setTimeout(carousel, 2500); // Change image every 2 seconds
+	}
+	</script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+</html>
