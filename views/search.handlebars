@@ -164,18 +164,16 @@
           </div>
           <div class="col-md-6" class="results">
 
-        
+            <h3 id="result"> Meet {{pts.animal_name}} </h3>
+            <p id="resultsub"> Species: {{animal_type}} | Age: {{this.id}} </p> 
+
+            <p id="bio"> {{location}} </p>
             
-            <h3 id="result"> Meet {{animal_name}} </h3>
-
-
-            <p id="resultsub"> Species: {{this.animal_type}} | Age: {{body}} </p> 
-
-            <p id="bio"> {{dataValues.bio}} </p>
-  
-        
-
-        
+       {{!--      <p>Flavor: </p>
+            <p>Price: ${{gender}}</p>
+            <p>Awesomeness: {{location}}</p>
+            <hr>
+       --}}
 
 
 
@@ -194,6 +192,17 @@
          
 
 
+    <!-- ===================================== MATCH POP UP SCREEN ============= -->
+
+<div id="matchScreen">
+<h1 class="matchText"> Congrats, it's a match!</h1> <hr id="hr">
+<h5 class="matchText" id="matchTextsmall"> We've let the shelter know you're interested. Check your email for
+next steps on how to meet your new Best Friend! </h5> 
+
+<a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+
+
+</div>
 
 
    
@@ -242,19 +251,28 @@
 
 window.onload = function() {
   $(".results").hide();
+  $("#matchScreen").hide();
 };
 
 $("#search").click(function(){
   $(".results").show();
 
+  $("#match").click(function(){
+  	$("#matchScreen").show();
+
+  	$(".popup-close").click(function(){
+  		$("#matchScreen").hide();
+  		$(".results").hide();
+  	});
+  });
+
 });
+
+
 </script>
 
 
 	<script type="text/javascript">
-
-
-  // This is getting user input from checkboxes
 
 
 // This is for the slideshow
@@ -273,7 +291,23 @@ $("#search").click(function(){
     	setTimeout(carousel, 2500); // Change image every 2 seconds
 	}
 
+
 	</script>
+
+
+<!-- This is for the Match pop Up Screen --> 
+<!-- <script> 
+
+window.onload = function() {
+  $("#matchScreen").hide();
+
+};
+
+$("#match").click(function(){
+  $("#matchScreen").show();
+});
+</script>
+ -->
   
 
 

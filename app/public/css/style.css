@@ -194,6 +194,61 @@ header.results {
   margin-top:2%;
 }
 
+/*///////////////// SEARCH PAGE MATCH POP UP BOX //////////////*/
+#matchScreen {
+    width:50%;
+    height:50%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:#18BC9C;
+    opacity:0.9;
+    text-align:center;
+    margin-left:25%;
+    margin-top:15%;
+    border: solid thick white;
+
+}
+
+.matchText {
+  margin-top:5%;
+  color:white;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+#matchTextsmall {
+  letter-spacing:.5px;
+
+}
+
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+ 
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
 
 /*///////////////// ADD A PET PAGE //////////////*/
 
