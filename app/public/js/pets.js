@@ -5,35 +5,8 @@ var longitude;
 var latitude1;
 var longitude1;
 
-// function getLocation(){
-//       console.log(navigator.geolocation)
-//       if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(showPosition,decline);
-//         //return true;
-//       } else {
-//         console.log("fuck u")
-//       }
-//     };
 
-//     function showPosition(position) {
-//       latitude1 = position.coords.latitude 
-//       longitude1 = position.coords.longitude; 
-//       console.log(latitude1, longitude1);
 
-  
-//     };
-
-//     function decline(){
-//       console.log("decline");
-//       $("#submit").on("click", function(){
-//         event.preventDefault();
-//         zipcode = $("#zipcode").val().trim();
-//         console.log(zipcode);
-
-//       });
-//     };
-
-//     getLocation();
 var count = 0;
 
 
@@ -102,6 +75,12 @@ var count = 0;
       bio: $("#bioBox").val(),
       photo: $("#photoUpload").val().trim()
     }
+
+    $("#matchScreen").show();
+    $(".popup-close").click(function(){
+    $("#matchScreen").hide();
+
+    })
 
 
 

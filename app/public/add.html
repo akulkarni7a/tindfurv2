@@ -169,6 +169,18 @@
   			<button type = "button" class="btn-primary" id="submit"> SUBMIT </button> <br> <br>
           </div>
           <script type="text/javascript" src="js/pets.js"></script>
+
+
+<!-- =============== POP UP SCREEN ================== -->
+
+    <div id="matchScreen">
+        <h1 class="matchText"> Thank you for your submission!</h1> <hr id="hr">
+        <h5 class="matchText" id="matchTextsmall"> Your pet's profile is up and running. They're on their way to finding their furrrrfect patch! </h5> 
+
+<a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+
+
+</div>
           
 
 
@@ -247,6 +259,16 @@
     	setTimeout(carousel, 2500); // Change image every 2 seconds
 	}
 	</script>
+
+  <script type ="text/javascript">
+   $("#submit").click(function(){
+      $("#matchScreen").show();
+
+      $(".popup-close").click(function(){
+      $("#matchScreen").hide();
+      $(".results").hide();
+
+    </script>
 
 
 
