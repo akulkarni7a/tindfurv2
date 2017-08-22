@@ -15,11 +15,11 @@ p {
   font-size: 20px; }
 
 p.small {
-  font-size: 15px;
-  padding-top:6px;
-  padding-left:30px;
-  padding-right:30px;
-  padding-bottom:-10px;
+  font-size: 20px;
+  padding-top:10px;
+  padding-left:40px;
+  padding-right:40px;
+
    }
 
 a,
@@ -85,8 +85,14 @@ section.success {
   #mainNav .navbar-brand {
     font-size: 1.1rem;
     color: white;
-    text-align:center;
-    padding:0px; }
+    padding:0px; 
+   }
+
+    #navRight {
+      color:white;
+    }
+
+
 
 
 
@@ -189,6 +195,7 @@ header.results {
   font-size: 12px;
   color:gray;
   border:solid thin #18BC9C;
+  padding:5%;
 }
 
 
