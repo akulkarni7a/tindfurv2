@@ -14,13 +14,15 @@ module.exports = function(app) {
 
   // Get all chirps
   app.get("/search/pets/:animal_type?/:gender?/:age?", function(req, res) {
-
+    console.log('search 2')
     // var dbQuery = "SELECT * FROM pets WHERE animal_type = ? AND gender = ? AND age = ?";
    
     if(req.params.animal_type){
-      Pet.findOne({
+      Pet.findAll({
         where: {
           animal_type: req.params.animal_type,
+          gender: req.params.gender,
+          age: req.params.age
         }
       }).then(function(result){
         // return res.json(result);
@@ -28,8 +30,12 @@ module.exports = function(app) {
         console.log("animal_type: "+req.params.animal_type);
         // console.log("gender: "+req.params.gender);
         // console.log("age: "+req.params.age);
-        console.log(result.dataValues);
-        res.render('search',result.dataValues);
+        console.log(result);
+        //res.render('test', {result: result.dataValues});
+
+
+
+        res.json(result[0].dataValues);
       })
     }
     else{
@@ -63,7 +69,7 @@ module.exports = function(app) {
     });
 
   app.get("/search", function(req, res) {
-
+    console.log('search')
   // 
 
 
@@ -82,7 +88,7 @@ module.exports = function(app) {
     //   }
     // })
       
-      res.render('search',res);
+      res.render('search');
 
   //     // console.log(newresult);
   //   }

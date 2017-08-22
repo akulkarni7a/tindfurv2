@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>TindFur | Pet Finder</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!--jQuery -->
-    
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-
-  </head>
-
-  <body class="index" id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -60,7 +30,7 @@
 
       <header class="filters">
       <div class="container">
-        <h5> FILTER PETS </h5>
+        <h5> FILTER PETS</h5>
 
         <hr id="hr">
 
@@ -164,10 +134,10 @@
           </div>
           <div class="col-md-6" class="results">
 
-            <h3 id="result"> Meet {{pts.animal_name}} </h3>
-            <p id="resultsub"> Species: {{animal_type}} | Age: {{this.id}} </p> 
+            <h3 id="result"> Meet {{this.animal_name}} </h3>
+            <p id="resultsub"> Species: {{this.animal_type}} | Age: {{this.id}} </p> 
 
-            <p id="bio"> {{location}} </p>
+            <p id="bio"> {{this.bio}} </p>
             
        {{!--      <p>Flavor: </p>
             <p>Price: ${{gender}}</p>
@@ -254,20 +224,6 @@ window.onload = function() {
   $("#matchScreen").hide();
 };
 
-$("#search").click(function(){
-  $(".results").show();
-
-  $("#match").click(function(){
-  	$("#matchScreen").show();
-
-  	$(".popup-close").click(function(){
-  		$("#matchScreen").hide();
-  		$(".results").hide();
-  	});
-  });
-
-});
-
 
 </script>
 
@@ -312,7 +268,3 @@ $("#match").click(function(){
 
 
 
-
-  </body>
-
-</html>

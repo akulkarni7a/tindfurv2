@@ -1,4 +1,5 @@
-/* global moment */
+$(function() {
+  /* global moment */
 var latitude;
 var longitude;
 var latitude1;
@@ -36,6 +37,7 @@ var longitude1;
 
   $("#search").on("click",function(event){
     event.preventDefault();
+     $(".results").show();
 
     var userData = {
       animal: $('input[name="animaltype_name"]:checked')[0].id,
@@ -43,11 +45,25 @@ var longitude1;
       age: $('input[name="age_name"]:checked')[0].id
     }
 
-    // console.log(userData);
+     console.log(userData.animal);
 
-    $.get("/search/pets/"+userData.animal,function(data){
+    $.get("/search/pets/"+userData.animal+"/"+userData.gender+"/"+userData.age,function(data){
       console.log("User Data Animal");
       console.log(userData.animal);
+      console.log('data: ' + JSON.stringify(data));
+
+      $("#result").html(data.animal_name);
+      $("#bio").html(data.bio);
+      $("#resultsub").html(" Species: " + data.animal_type + " | Age: " + data.age);
+
+  //     $("#match").click(function(){
+  //     $("#matchScreen").show();
+
+  //     $(".popup-close").click(function(){
+  //     $("#matchScreen").hide();
+  //     $(".results").hide();
+  //   });
+  // });
 
     });
 
@@ -66,6 +82,8 @@ var longitude1;
       bio: $("#bioBox").val(),
       photo: $("#photoUpload").val().trim()
     }
+
+
 
   
 
@@ -173,3 +191,4 @@ var longitude1;
 
 // When the page loads, grab and display all of our chirps
 
+});
