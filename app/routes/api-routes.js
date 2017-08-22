@@ -35,7 +35,7 @@ module.exports = function(app) {
 
 
 
-        res.json(result[0].dataValues);
+        res.json(result);
       })
     }
     else{

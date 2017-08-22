@@ -34,6 +34,13 @@ var longitude1;
 //     };
 
 //     getLocation();
+var count = 0;
+
+
+
+// $("#next").on("click",function(){
+//   count++;
+// });
 
   $("#search").on("click",function(event){
     event.preventDefault();
@@ -50,20 +57,32 @@ var longitude1;
     $.get("/search/pets/"+userData.animal+"/"+userData.gender+"/"+userData.age,function(data){
       console.log("User Data Animal");
       console.log(userData.animal);
+      console.log(data[0]);
       console.log('data: ' + JSON.stringify(data));
 
-      $("#result").html(data.animal_name);
-      $("#bio").html(data.bio);
-      $("#resultsub").html(" Species: " + data.animal_type + " | Age: " + data.age);
+      function display(count){
+      $("#result").html(data[count].animal_name);
+      $("#bio").html(data[count].bio);
+      $("#resultsub").html(" Species: " + data[count].animal_type + " | Age: " + data[count].age);
+      };
 
-  //     $("#match").click(function(){
-  //     $("#matchScreen").show();
+      display(count);
 
-  //     $(".popup-close").click(function(){
-  //     $("#matchScreen").hide();
-  //     $(".results").hide();
-  //   });
-  // });
+      $("#next").on("click", function(){
+        count++;
+        display(count);
+      });
+
+
+
+      $("#match").click(function(){
+      $("#matchScreen").show();
+
+      $(".popup-close").click(function(){
+      $("#matchScreen").hide();
+      $(".results").hide();
+    });
+  });
 
     });
 
