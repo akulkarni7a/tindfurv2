@@ -64,6 +64,7 @@ var count = 0;
       $("#result").html(data[count].animal_name);
       $("#bio").html(data[count].bio);
       $("#resultsub").html(" Species: " + data[count].animal_type + " | Age: " + data[count].age);
+      $("#photo").attr("src",data[count].photo);
       };
 
       display(count);
