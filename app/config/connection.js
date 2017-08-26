@@ -29,8 +29,8 @@
 var Sequelize = require("sequelize");
 //mysql://l15l0uwqmotagnt7:m46acng4fadn8ab9@l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/z9jgxv7wg91vhhe6
 // Creates mySQL connection using Sequelize
-var sequelize = new Sequelize("tindfur", "l15l0uwqmotagnt7", "m46acng4fadn8ab9", {
-  host: "mysql://l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/z9jgxv7wg91vhhe6",
+var sequelize = new Sequelize("z9jgxv7wg91vhhe6", "l15l0uwqmotagnt7", "m46acng4fadn8ab9", {
+  host: "l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   port: 3306,
   dialect: "mysql",
   pool: {
