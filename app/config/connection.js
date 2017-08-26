@@ -29,8 +29,8 @@
 var Sequelize = require("sequelize");
 
 // Creates mySQL connection using Sequelize
-var sequelize = new Sequelize("tindfur", "root", "Cricket47", {
-  host: "l15l0uwqmotagnt7:m46acng4fadn8ab9@l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/z9jgxv7wg91vhhe6",
+var sequelize = new Sequelize("tindfur", "l15l0uwqmotagnt7", "m46acng4fadn8ab9", {
+  host: "l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/z9jgxv7wg91vhhe6",
   port: 3306,
   dialect: "mysql",
   pool: {
