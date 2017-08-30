@@ -10,7 +10,7 @@
 //   port: 3306,
 //   host: "localhost",
 //   user: "root",
-//   password: "Cricket47",
+//   password: "",
 //   database: "tindfur"
 // });
 
